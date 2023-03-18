@@ -1,0 +1,11 @@
+img{
+    width: 15rem;
+    border-radius: 10rem;
+}
+img.card {
+    border-radius: 10rem;
+}
+.card {
+    flex-direction: row;
+    margin: 1rem 4rem 1rem 4rem;
+}

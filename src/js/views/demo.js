@@ -10,7 +10,34 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
-			<ul className="list-group">
+			<form>	
+					<div class="mb-3">
+						<label for="full_name" class="form-label">Full name</label>
+						<input type="text" class="form-control" id="full_name" aria-describedby="emailHelp"/>
+					</div>
+					<div class="mb-3">
+						<label for="exampleInputEmail1" class="form-label">Email address</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp"/>
+					</div>
+					<div class="mb-3">
+						<label for="agenda_slug" class="form-label">Agenda Slug</label>
+						<input type="text" class="form-control" id="agenda_slug" aria-describedby="agendalHelp"/>
+					</div>
+					<div class="mb-3">
+						<label for="address" class="form-label">Adress</label>
+						<input type="text" class="form-control" id="address" aria-describedby="addresslHelp"/>
+					</div>
+					<div class="mb-3">
+						<label for="phone" class="form-label">phone</label>
+						<input type="text" class="form-control" id="phone" aria-describedby="phonelHelp"/>
+					</div>
+					
+					<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+				<br/>
+				<br/>
+				<br/>
+			{/* <ul className="list-group">
 				{store.demo.map((item, index) => {
 					return (
 						<li
@@ -34,7 +61,7 @@ export const Demo = () => {
 					);
 				})}
 			</ul>
-			<br />
+			<br /> */}
 			<Link to="/">
 				<button className="btn btn-primary">Back home</button>
 			</Link>
