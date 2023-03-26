@@ -13,23 +13,23 @@ import "../../styles/demo.css";
 		}
 
 export	const FormContact = () => {
-	const {store} = useContext(Context);
-	const [contact , setContact] = useState(initialState);
-	const { type } = useParams();
-	const navigate = useNavigate()
-	useEffect(()=>{
-		if(type === 'edit'){
-			setContact(store.contact)
+		const {store} = useContext(Context);
+		const [contact , setContact] = useState(initialState);
+		const { type } = useParams();
+		const navigate = useNavigate()
+		useEffect(()=>{
+			if(type === 'edit'){
+				setContact(store.contact)
+			}
+		},[])
+		const handelChange = ({target})=>{
+			setContact({...contact, [target.name] : target.value})
 		}
-	},[])
-	const handelChange = ({target})=>{
-		setContact({...contact, [target.name] : target.value})
-	}
-	const handelSubmit = async (e)=>{
-		e.preventDefault();
-		type === 'edit' ? await editContact(contact) : await createNewContact(contact);
-		navigate('/');
-	}
+		const handelSubmit = async (e)=>{
+			e.preventDefault();
+			type === 'edit' ? await editContact(contact) : await createNewContact(contact);
+			navigate('/');
+		}
 
 	return (
 		<div className="container">
