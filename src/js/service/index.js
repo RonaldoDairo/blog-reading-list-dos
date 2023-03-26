@@ -1,6 +1,4 @@
 
-
-//const URL = "https://assets.breatheco.de/apis/fake/contact/agenda/Dairo"
 const URL = "https://assets.breatheco.de/apis/fake/contact/"
 const HEADERS = {"Content-Type": "application/json"}
 export const getAllContacts = async() => {
@@ -14,10 +12,8 @@ export const getAllContacts = async() => {
         }  
 }
 
-
 export const createNewContact = async(newContact)=> {
     try{
-        console.log("in create contact", newContact);
         const response = await fetch(URL,{method: "POST",
         body: JSON.stringify(newContact),
         headers: HEADERS 
@@ -30,7 +26,6 @@ export const createNewContact = async(newContact)=> {
 }
 export const editContact = async (contact)=>{
     try{
-        console.log("ediittt", contact)
         const res = await fetch(`${URL}${contact.id}`, {
             method: "PUT",
             body: JSON.stringify(contact),
@@ -44,7 +39,6 @@ export const editContact = async (contact)=>{
 }
 export const deleteContact = async (contact_id)=>{
     try{
-        console.log('Delete', contact_id)
         const res = await fetch(`${URL}${contact_id}`, {
             method: "DELETE",
             headers: HEADERS, 

@@ -5,17 +5,14 @@ import { getAllContacts } from "../service";
 import { Context } from "../store/appContext";
 import { Contact } from "../component/contact.jsx";
 export const Home = () => {
-	// const [list, setList] = useState([])
 	const {store , actions } = useContext(Context);
-	console.log( store)
-	console.log(actions)
 
 	const [load,setload] = useState (false)
 	const getData = async()=>{
-			// setload(true)
+			setload(true)
 			const data = await getAllContacts();
 			actions.addContactList(data);
-			// setload(false)
+			setload(false)
 	} 
 	useEffect(() => {
 	getData()

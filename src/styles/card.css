@@ -1,3 +1,11 @@
+*{
+        margin: 0;
+        padding: 0;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 img{
     width: 15rem;
     border-radius: 10rem;
@@ -8,4 +16,20 @@ img.card {
 .card {
     flex-direction: row;
     margin: 1rem 4rem 1rem 4rem;
+}
+.iconPencil{
+    margin-left: 9rem;
+    cursor: pointer;
+}
+.iconTrash{
+    cursor: pointer;
+}
+.iconPencil:active{
+    color: aqua;
+}
+.iconTrash:active{
+    color: red;
+}
+.datos{
+    font-size: 25px;
 }

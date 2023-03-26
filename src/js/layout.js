@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
-import { Home } from "./views/home.js";
+import { Home } from "./views/home.jsx";
 import {FormContact} from "./views/formcontact.jsx";
 
 import injectContext from "./store/appContext";
